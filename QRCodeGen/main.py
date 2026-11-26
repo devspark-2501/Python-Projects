@@ -5,7 +5,7 @@ print('-----------------------------------------------')
 print('         📱 Welcome to QR Code Generator!        ')
 print('-----------------------------------------------')
 
-data - input('Enter the data you want to encode in the QR code: ')
+data = input('Enter the data you want to encode in the QR code: ')
 fileName = input('Enter the filename to save the QR code (without extension): ')
 
 qr = qrcode.QRCode(
