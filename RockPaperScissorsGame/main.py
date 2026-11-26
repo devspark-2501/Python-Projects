@@ -1,3 +1,4 @@
+
 import random
 
 Choices = ['rock', 'paper', 'scissors']
@@ -10,6 +11,9 @@ print('-----------------------------------------------')
 
 while True:
     player = input('Enter your choice (rock, paper, scissors) or type (Q) to quit: ').lower()
+
+    if player == "q":
+        break
 
     if player not in Choices:
         print("Invalid choice! Try again.")
@@ -37,13 +41,14 @@ while True:
         print("😢 Computer wins!")
         computer_score += 1
 
-    play_again = input("\nPlay again? (y/n): ").lower()
-
-    if play_again != "y":
-        print("Thanks for playing!")
-        break
     print('-----------------------------------------------')
     print(f"Player Score: {player_score}")
     print(f"Computer Score: {computer_score}")
     print('-----------------------------------------------')
-    
+
+print("\nThanks for playing!")
+
+print('-----------------------------------------------')
+print(f"Final Player Score: {player_score}")
+print(f"Final Computer Score: {computer_score}")
+print('-----------------------------------------------')
