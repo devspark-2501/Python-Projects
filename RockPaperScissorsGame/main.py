@@ -1,8 +1,8 @@
 import random
 
 Choices = ['rock', 'paper', 'scissors']
-# computer_score = 0
-# player_score = 0
+computer_score = 0
+player_score = 0
 
 print('-----------------------------------------------')
 print('       🎮 Welcome to Rock Paper Scissors!      ')
@@ -31,12 +31,19 @@ while True:
         (player == "scissors" and computer == "paper")
     ):
         print("🎉 You win!")
+        player_score += 1
 
     else:
         print("😢 Computer wins!")
+        computer_score += 1
 
     play_again = input("\nPlay again? (y/n): ").lower()
 
     if play_again != "y":
         print("Thanks for playing!")
         break
+    print('-----------------------------------------------')
+    print(f"Player Score: {player_score}")
+    print(f"Computer Score: {computer_score}")
+    print('-----------------------------------------------')
+    
